@@ -112,3 +112,162 @@ console.log("My age in years:", myAge);
 console.log("My approximate age in days:", ageInDays);
 console.log("My approximate age in hours:", ageInHours);
 console.log("Year I will turn 100:", yearTurning100);
+
+// ===================================
+// TASK 7.3: FUNCTIONS
+// ===================================
+
+// 1. Calculate the area of a rectangle
+function calculateArea(width, height) {
+    return width * height;
+}
+
+console.log("Rectangle area:", calculateArea(5, 4));
+
+
+// 2. Convert Celsius to Fahrenheit
+function celsiusToFahrenheit(celsius) {
+    return (celsius * 9 / 5) + 32;
+}
+
+console.log("Temperature:", celsiusToFahrenheit(25), "°F");
+
+
+// 3. Check whether a number is even
+function isEven(number) {
+    return number % 2 === 0;
+}
+
+console.log("Is 8 even?", isEven(8));
+console.log("Is 7 even?", isEven(7));
+
+
+// 4. Get initials from a full name
+function getInitials(fullName) {
+    return fullName
+        .trim()
+        .split(/\s+/)
+        .map(name => name[0].toUpperCase())
+        .join("");
+}
+
+console.log("Initials:", getInitials("Michael Yugi"));
+
+
+// 5. Reverse a string
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+
+console.log("Reversed name:", reverseString("Michael"));
+
+
+// 6. Function with default parameters
+function greetPerson(name = "Guest", greeting = "Hello") {
+    return `${greeting}, ${name}!`;
+}
+
+console.log(greetPerson());
+console.log(greetPerson("Michael"));
+console.log(greetPerson("David", "Hi"));
+
+
+// 7. Calculate a tip
+function calculateTip(bill, tipPercent = 15) {
+    return bill * (tipPercent / 100);
+}
+
+console.log("Tip amount:", calculateTip(1000));
+console.log("Tip at 20%:", calculateTip(1000, 20));
+
+// ===================================
+// TASK 7.4
+// ===================================
+
+function getGrade(score) {
+    if (score >= 90) {
+        return "A";
+    } else if (score >= 80) {
+        return "B";
+    } else if (score >= 70) {
+        return "C";
+    } else if (score >= 60) {
+        return "D";
+    } else {
+        return "F";
+    }
+}
+
+console.log("Score 95:", getGrade(95));
+console.log("Score 85:", getGrade(85));
+console.log("Score 75:", getGrade(75));
+console.log("Score 65:", getGrade(65));
+console.log("Score 45:", getGrade(45));
+
+// ===== JavaScript Calculator Mini-Project =====
+
+// Addition
+function add(num1, num2) {
+    return num1 + num2;
+}
+
+// Subtraction
+function subtract(num1, num2) {
+    return num1 - num2;
+}
+
+// Multiplication
+function multiply(num1, num2) {
+    return num1 * num2;
+}
+
+// Division
+function divide(num1, num2) {
+    if (num2 === 0) {
+        return "Error: Cannot divide by zero!";
+    }
+
+    return num1 / num2;
+}
+
+// Main calculator function
+function calculate(num1, operator, num2) {
+    switch (operator) {
+        case "+":
+            return add(num1, num2);
+
+        case "-":
+            return subtract(num1, num2);
+
+        case "*":
+            return multiply(num1, num2);
+
+        case "/":
+            return divide(num1, num2);
+
+        case "%":
+            if (num2 === 0) {
+                return "Error: Cannot calculate remainder with zero!";
+            }
+            return num1 % num2;
+
+        case "**":
+            return num1 ** num2;
+
+        default:
+            return "Error: Invalid operator!";
+    }
+}
+
+// Test the calculator
+console.log("===== Calculator Results =====");
+
+console.log("10 + 5 =", calculate(10, "+", 5));
+console.log("10 - 5 =", calculate(10, "-", 5));
+console.log("10 * 5 =", calculate(10, "*", 5));
+console.log("10 / 5 =", calculate(10, "/", 5));
+console.log("10 % 3 =", calculate(10, "%", 3));
+console.log("2 ** 3 =", calculate(2, "**", 3));
+
+console.log("10 / 0 =", calculate(10, "/", 0));
+console.log("10 ? 5 =", calculate(10, "?", 5));
