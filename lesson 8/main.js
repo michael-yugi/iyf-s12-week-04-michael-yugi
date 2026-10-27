@@ -18,8 +18,8 @@ console.log(sortedNumbers);
 
 // part 2 object
 const person = {
-    firstname:"Michael",
-    lastname: "Yugi",
+    firstname:"Tupac",
+    lastname: "Shakur",
     age: "42",
     hobbies: ["reading", "gaming", "traveling"],
     address: {
