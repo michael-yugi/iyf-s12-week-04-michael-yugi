@@ -1,7 +1,7 @@
 // TASK 7.1: VARIABLE PRACTICE
 
 // 1. String: your name
-let myname = "Michael Yugi";
+let myname = "Tupac Shakur";
 
 // 2. Number: your age
 let age = 22;
@@ -52,8 +52,8 @@ console.log("After decrement:", count);
 
 // STRING OPERATIONS
 
-let firstName = "Michael";
-let lastName = "Yugi";
+let firstName = "Tupac";
+let lastName = "Shakur";
 
 // Join two strings
 let fullName = firstName + " " + lastName;
