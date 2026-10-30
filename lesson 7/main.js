@@ -271,3 +271,34 @@ console.log("2 ** 3 =", calculate(2, "**", 3));
 
 console.log("10 / 0 =", calculate(10, "/", 0));
 console.log("10 ? 5 =", calculate(10, "?", 5));
+
+// ===================================
+// TASK 7.4: LOOPS
+// ===================================
+
+// 1. FOR LOOP
+console.log("FOR LOOP");
+
+for (let i = 1; i <= 5; i++) {
+    console.log("Number:", i);
+}
+
+// 2. WHILE LOOP
+console.log("WHILE LOOP");
+
+let number = 1;
+
+while (number <= 5) {
+    console.log("Number:", number);
+    number++;
+}
+
+// 3. DO...WHILE LOOP
+console.log("DO...WHILE LOOP");
+
+let countNumber = 1;
+
+do {
+    console.log("Number:", countNumber);
+    countNumber++;
+} while (countNumber <= 5);
